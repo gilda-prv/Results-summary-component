@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
-/* font-family: 'Hanken Grotesk', sans-serif; */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 18px;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 .container {
   padding: 0 30px;
@@ -20,9 +20,10 @@ body {
   max-width: 700px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: blueviolet;
   border-radius: 30px;
   overflow: hidden;
+  -webkit-box-shadow: 4px 4px 4px 2px rgb(234, 234, 234);
+  box-shadow: 2px 2px 2px 2px rgb(167, 167, 167);
 }
 .card-content {
   background: rgb(46, 43, 233);
@@ -74,6 +75,86 @@ body {
   font-weight: 500;
   font-size: 13px;
 }
+.summary {
+  padding: 40px 30px;
+}
+.summary h3 {
+  font-weight: 700;
+  font-size: 23px;
+}
+.flex-item {
+  display: flex;
+  font-weight: 700;
+}
+.flex-item p {
+  margin-left: 10px;
+  gap: 0.5rem;
+}
+.card {
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+}
+div.card > * {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 1.1rem;
+}
+.card-1,
+.card-2,
+.card-3,
+.card-4 {
+  border-radius: 5px;
+  padding: 0.8rem;
+}
+.card-1,
+.card-2,
+.card-3,
+.card-4,
+.flex-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.score {
+  color: hsl(224, 30%, 27%);
+}
+span {
+  color: hsla(224, 30%, 27%, 0.5);
+}
+.card-1 {
+  color: hsl(0, 100%, 67%);
+  background-color: hsl(0, 100%, 67%, 0.1);
+}
+.card-2 {
+  color: hsl(39, 100%, 56%);
+  background-color: hsl(39, 100%, 56%, 0.1);
+}
+.card-3 {
+  color: hsl(166, 100%, 37%);
+  background-color: hsl(166, 100%, 37%, 0.1);
+}
+.card-4 {
+  color: hsl(234, 85%, 45%);
+  background-color: hsl(234, 85%, 45%, 0.1);
+}
+button {
+  padding: 10px 60px;
+  border-radius: 2rem;
+  border: none;
+  font-weight: 700;
+  color: white;
+  background-color: hsl(224, 30%, 27%);
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100%;
+}
+button:hover {
+  background-image: linear-gradient(
+    180deg,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+}
 .attribution {
   display: flex;
   justify-content: center;
@@ -87,4 +168,53 @@ body {
   color: hsl(228, 45%, 44%);
   text-decoration: none;
   margin-left: 2px;
+}
+@media only screen and(min-width: 300px) {
+  body {
+    height: 100vh;
+    margin: 0 0.7rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+
+  .grid {
+    width: 38rem;
+    grid-template-columns: 1fr;
+    /* flex-direction: row; */
+  }
+
+  .card-content,
+  .summary {
+    width: 50%;
+  }
+
+  .card-content {
+    padding: 2.2rem;
+    gap: 1.4rem;
+    border-radius: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .card-content p:last-child {
+    max-width: 11rem;
+  }
+
+  .circle {
+    height: 8.5rem;
+    width: 8.5rem;
+  }
+
+  .summary {
+    border-radius: 0 2.2rem 2.2rem 0;
+    box-shadow: 23px 31px 47px 0px rgba(235, 241, 255, 1);
+  }
+
+  .summary {
+    padding: 2.2rem 1.5rem;
+  }
 }
